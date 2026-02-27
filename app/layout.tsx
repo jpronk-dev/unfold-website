@@ -51,6 +51,7 @@ export const metadata: Metadata = {
     ],
   },
   other: {
+    "theme-color": "#000000",
     "msapplication-TileColor": "#000000",
     "msapplication-square70x70logo": "/mstile-70x70.png",
     "msapplication-square150x150logo": "/mstile-150x150.png",
