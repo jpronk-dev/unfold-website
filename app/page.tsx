@@ -22,7 +22,7 @@ export default function Home() {
         <Nav transparent className="relative z-10" />
 
         {/* Hero content */}
-        <div className="relative z-10 flex min-h-[900px] items-center justify-center px-4 lg:px-16">
+        <div className="relative z-10 flex min-h-[680px] lg:min-h-[900px] items-center justify-center px-4 lg:px-16">
           <div className="flex flex-col items-center gap-8 text-center max-w-[560px]">
             <div className="flex flex-col items-center gap-6">
               <h1 className="font-[family-name:var(--font-playfair)] text-[56px] font-bold text-white leading-tight">
