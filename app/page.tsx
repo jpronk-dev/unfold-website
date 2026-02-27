@@ -67,9 +67,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={150}>
-            <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
-          </FadeIn>
+          <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
         </div>
       </section>
 
@@ -79,9 +77,9 @@ export default function Home() {
         aria-label="Feature 2"
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
-          <FadeIn className="order-last lg:order-first" delay={150}>
+          <div className="order-last lg:order-first">
             <PhoneMockup src="/images/app-screen2.png" alt="Unfold app — kies je vibe" />
-          </FadeIn>
+          </div>
 
           <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
             <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-[#40341e] leading-[1.2]">
@@ -115,9 +113,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={150}>
-            <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
-          </FadeIn>
+          <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
         </div>
       </section>
 
@@ -188,17 +184,17 @@ export default function Home() {
           aria-label="Download CTA"
         >
           {/* Phone Mockup — only on desktop */}
-          <FadeIn className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
+          <div className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
             <Image
               src="/images/app-screen4.png"
               alt="Unfold app preview"
               fill
               className="object-contain"
             />
-          </FadeIn>
+          </div>
 
           {/* Text + CTA */}
-          <FadeIn className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0" delay={150}>
+          <FadeIn className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0">
             <h2 className="font-[family-name:var(--font-playfair)] text-[40px] lg:text-[55px] font-bold text-white leading-[48px] lg:leading-[68px]">
               <span className="block" style={{ marginBottom: "13px" }}>Geen small talk.</span>
               <span className="block">Gewoon echte vragen.</span>
