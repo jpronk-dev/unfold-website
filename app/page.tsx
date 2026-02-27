@@ -169,9 +169,8 @@ export default function Home() {
         </FadeIn>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="relative flex flex-col" id="download">
-        {/* Background */}
+      {/* ─── CTA + Footer (gedeelde achtergrond) ─── */}
+      <div className="relative">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/cta-bg.png"
@@ -179,42 +178,42 @@ export default function Home() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/99 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/80 to-black" />
         </div>
 
-        {/* CTA content */}
-        <div
-          className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-center pt-16 lg:pt-28 px-4 lg:px-16 gap-12"
-          aria-label="Download CTA"
-        >
-          {/* Phone Mockup — only on desktop */}
-          <div className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
-            <Image
-              src="/images/app-screen4.png"
-              alt="Unfold app preview"
-              fill
-              className="object-contain"
-            />
+        <section className="relative z-10 flex flex-col" id="download">
+          <div
+            className="flex flex-col lg:flex-row items-start lg:items-center justify-center pt-16 lg:pt-28 px-4 lg:px-16 gap-12"
+            aria-label="Download CTA"
+          >
+            {/* Phone Mockup — only on desktop */}
+            <div className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
+              <Image
+                src="/images/app-screen4.png"
+                alt="Unfold app preview"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* Text + CTA */}
+            <FadeIn className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0">
+              <h2 className="font-[family-name:var(--font-playfair)] text-[40px] lg:text-[55px] font-bold text-white leading-[48px] lg:leading-[68px]">
+                <span className="block" style={{ marginBottom: "13px" }}>Geen small talk.</span>
+                <span className="block">Gewoon echte vragen.</span>
+              </h2>
+              <a
+                href="#"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-[family-name:var(--font-inter)] text-base text-black w-fit hover:bg-white/90 transition-colors"
+              >
+                Start the convo
+              </a>
+            </FadeIn>
           </div>
+        </section>
 
-          {/* Text + CTA */}
-          <FadeIn className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0">
-            <h2 className="font-[family-name:var(--font-playfair)] text-[40px] lg:text-[55px] font-bold text-white leading-[48px] lg:leading-[68px]">
-              <span className="block" style={{ marginBottom: "13px" }}>Geen small talk.</span>
-              <span className="block">Gewoon echte vragen.</span>
-            </h2>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-[family-name:var(--font-inter)] text-base text-black w-fit hover:bg-white/90 transition-colors"
-            >
-              Start the convo
-            </a>
-          </FadeIn>
-        </div>
-
-      </section>
-
-      <Footer />
+        <Footer noBackground />
+      </div>
     </main>
   );
 }

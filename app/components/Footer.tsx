@@ -1,21 +1,22 @@
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ noBackground = false }: { noBackground?: boolean }) {
   return (
     <footer
       className="relative flex justify-center px-4 py-16 lg:px-16 lg:py-20"
       aria-label="Footer"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/cta-bg.png"
-          alt=""
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
-      </div>
+      {!noBackground && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/cta-bg.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
+        </div>
+      )}
 
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-[1280px]">
         {/* Top */}
