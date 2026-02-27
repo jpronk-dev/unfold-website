@@ -63,12 +63,14 @@ export const metadata: Metadata = {
       "Voor first dates, vrienden, situatieships en 3AM talks. Kies een vibe. Trek een kaart. See what unfolds.",
     type: "website",
     locale: "nl_NL",
+    images: [{ url: "/og-image.png", width: 1512, height: 945 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Unfold — Geen small talk. Gewoon echte vragen.",
     description:
       "Voor first dates, vrienden, situatieships en 3AM talks. Kies een vibe. Trek een kaart. See what unfolds.",
+    images: ["/og-image.png"],
   },
 };
 
