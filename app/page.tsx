@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import FadeIn from "./components/FadeIn";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="relative z-10 flex min-h-[680px] lg:min-h-[900px] items-center justify-center px-4 lg:px-16">
-          <div className="flex flex-col items-center gap-8 text-center max-w-[560px]">
+          <FadeIn className="flex flex-col items-center gap-8 text-center max-w-[560px]">
             <div className="flex flex-col items-center gap-6">
               <h1 className="font-[family-name:var(--font-playfair)] text-[56px] font-bold text-white leading-tight">
                 Unfold
@@ -39,7 +40,7 @@ export default function Home() {
             >
               Start the convo
             </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -50,8 +51,7 @@ export default function Home() {
         id="about"
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
-          {/* Text */}
-          <div className="flex flex-col gap-6 w-full lg:flex-1">
+          <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
             <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-white leading-[1.2]">
               Dit wordt geen
               <br />
@@ -65,9 +65,11 @@ export default function Home() {
               <p>Soms ongemakkelijk.</p>
               <p>Altijd eerlijk.</p>
             </div>
-          </div>
+          </FadeIn>
 
-          <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
+          <FadeIn delay={150}>
+            <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
+          </FadeIn>
         </div>
       </section>
 
@@ -77,13 +79,11 @@ export default function Home() {
         aria-label="Feature 2"
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
-          {/* Phone left on desktop, below text on mobile */}
-          <div className="order-last lg:order-first">
+          <FadeIn className="order-last lg:order-first" delay={150}>
             <PhoneMockup src="/images/app-screen2.png" alt="Unfold app — kies je vibe" />
-          </div>
+          </FadeIn>
 
-          {/* Text */}
-          <div className="flex flex-col gap-6 w-full lg:flex-1">
+          <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
             <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-[#40341e] leading-[1.2]">
               Kies je vibe.
             </h2>
@@ -94,7 +94,7 @@ export default function Home() {
               <p>Geen standaard &quot;wat doe je?&quot;.</p>
               <p>Gewoon kaarten die iets losmaken.</p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -104,8 +104,7 @@ export default function Home() {
         aria-label="Feature 3"
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
-          {/* Text */}
-          <div className="flex flex-col gap-6 w-full lg:flex-1">
+          <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
             <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-black leading-[1.2]">
               Durf te kiezen.
             </h2>
@@ -114,9 +113,11 @@ export default function Home() {
               <p>Verdedig.</p>
               <p>Overleef de discussie.</p>
             </div>
-          </div>
+          </FadeIn>
 
-          <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+          <FadeIn delay={150}>
+            <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+          </FadeIn>
         </div>
       </section>
 
@@ -125,7 +126,7 @@ export default function Home() {
         className="bg-[#faf0e8] flex justify-center px-4 py-16 lg:px-16 lg:py-28"
         aria-label="Founder quote"
       >
-        <div className="flex flex-col items-center gap-8 max-w-[768px] w-full text-center">
+        <FadeIn className="flex flex-col items-center gap-8 max-w-[768px] w-full text-center">
           {/* Logo */}
           <div className="flex items-center gap-3 justify-center">
             <Image
@@ -165,10 +166,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
-      {/* ─── CTA + Footer ─── */}
+      {/* ─── CTA ─── */}
       <section className="relative flex flex-col" id="download">
         {/* Background */}
         <div className="absolute inset-0 z-0">
@@ -187,17 +188,17 @@ export default function Home() {
           aria-label="Download CTA"
         >
           {/* Phone Mockup — only on desktop */}
-          <div className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
+          <FadeIn className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
             <Image
               src="/images/app-screen4.png"
               alt="Unfold app preview"
               fill
               className="object-contain"
             />
-          </div>
+          </FadeIn>
 
           {/* Text + CTA */}
-          <div className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0">
+          <FadeIn className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0" delay={150}>
             <h2 className="font-[family-name:var(--font-playfair)] text-[40px] lg:text-[55px] font-bold text-white leading-[48px] lg:leading-[68px]">
               <span className="block" style={{ marginBottom: "13px" }}>Geen small talk.</span>
               <span className="block">Gewoon echte vragen.</span>
@@ -208,7 +209,7 @@ export default function Home() {
             >
               Start the convo
             </a>
-          </div>
+          </FadeIn>
         </div>
 
       </section>
