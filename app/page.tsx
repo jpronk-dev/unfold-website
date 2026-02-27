@@ -1,65 +1,244 @@
 import Image from "next/image";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="w-full overflow-x-hidden">
+      {/* ─── Hero ─── */}
+      <section className="relative flex flex-col" aria-label="Hero">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-bg.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        {/* Nav */}
+        <Nav transparent className="relative z-10" />
+
+        {/* Hero content */}
+        <div className="relative z-10 flex min-h-[900px] items-center justify-center px-4 lg:px-16">
+          <div className="flex flex-col items-center gap-8 text-center max-w-[560px]">
+            <div className="flex flex-col items-center gap-6">
+              <h1 className="font-[family-name:var(--font-playfair)] text-[56px] font-bold text-white leading-tight">
+                Unfold
+              </h1>
+              <p className="font-[family-name:var(--font-roboto)] text-lg text-white leading-relaxed">
+                Voor first dates, vrienden, situatieships en 3AM talks. Kies
+                een vibe. Trek een kaart. See what unfolds.
+              </p>
+            </div>
+            <a
+              href="#download"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-[family-name:var(--font-inter)] text-base text-black whitespace-nowrap hover:bg-white/90 transition-colors"
+            >
+              Start the convo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Feature 1: Dit wordt geen standaard avond ─── */}
+      <section
+        className="bg-black flex justify-center px-4 py-16 lg:px-[120px] lg:py-28"
+        aria-label="Feature 1"
+        id="about"
+      >
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
+          {/* Text */}
+          <div className="flex flex-col gap-6 w-full lg:flex-1">
+            <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-white leading-[1.2]">
+              Dit wordt geen
+              <br />
+              standaard avond.
+            </h2>
+            <div className="font-[family-name:var(--font-inter)] text-base lg:text-lg text-white leading-relaxed">
+              <p>Trek een kaart.</p>
+              <p>Stel de vraag.</p>
+              <p>Kijk wat er gebeurt.</p>
+              <p className="mt-4">Soms grappig.</p>
+              <p>Soms ongemakkelijk.</p>
+              <p>Altijd eerlijk.</p>
+            </div>
+          </div>
+
+          <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
+        </div>
+      </section>
+
+      {/* ─── Feature 2: Kies je vibe ─── */}
+      <section
+        className="bg-[#faf0e8] flex justify-center px-4 py-16 lg:px-[120px] lg:py-28"
+        aria-label="Feature 2"
+      >
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
+          {/* Phone left on desktop, below text on mobile */}
+          <div className="order-last lg:order-first">
+            <PhoneMockup src="/images/app-screen2.png" alt="Unfold app — kies je vibe" />
+          </div>
+
+          {/* Text */}
+          <div className="flex flex-col gap-6 w-full lg:flex-1">
+            <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-[#40341e] leading-[1.2]">
+              Kies je vibe.
+            </h2>
+            <div className="font-[family-name:var(--font-roboto)] text-base lg:text-lg text-black leading-relaxed">
+              <p>Van first date tot deep talks met je besties.</p>
+              <p>Jij kiest de setting. Wij geven je de vragen.</p>
+              <p className="mt-4">Geen ongemakkelijke stiltes.</p>
+              <p>Geen standaard &quot;wat doe je?&quot;.</p>
+              <p>Gewoon kaarten die iets losmaken.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Feature 3: Durf te kiezen ─── */}
+      <section
+        className="bg-white flex justify-center px-4 py-16 lg:px-[120px] lg:py-28"
+        aria-label="Feature 3"
+      >
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
+          {/* Text */}
+          <div className="flex flex-col gap-6 w-full lg:flex-1">
+            <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-black leading-[1.2]">
+              Durf te kiezen.
+            </h2>
+            <div className="font-[family-name:var(--font-inter)] text-base lg:text-lg text-black leading-relaxed">
+              <p>Kies.</p>
+              <p>Verdedig.</p>
+              <p>Overleef de discussie.</p>
+            </div>
+          </div>
+
+          <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+        </div>
+      </section>
+
+      {/* ─── Testimonial ─── */}
+      <section
+        className="bg-[#faf0e8] flex justify-center px-4 py-16 lg:px-16 lg:py-28"
+        aria-label="Founder quote"
+      >
+        <div className="flex flex-col items-center gap-8 max-w-[768px] w-full text-center">
+          {/* Logo */}
+          <div className="flex items-center gap-3 justify-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/logo-icon.svg"
+              alt=""
+              width={25}
+              height={21}
+              className="lg:w-[35px] lg:h-[29px]"
+              aria-hidden="true"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <span className="font-[family-name:var(--font-playfair)] text-[33px] lg:text-[45px] font-bold text-[#40341e]">
+              Unfold
+            </span>
+          </div>
+
+          {/* Quote */}
+          <blockquote className="font-[family-name:var(--font-inter)] text-xl lg:text-2xl font-medium text-[#40341e] leading-[1.4]">
+            &ldquo;Ik wilde een app maken die mensen dichter bij elkaar brengt.
+            Zonder ongemakkelijke stiltes. Zonder oppervlakkigheid.&rdquo;
+          </blockquote>
+
+          {/* Avatar */}
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              src="/images/avatar.png"
+              alt="Joppe, Founder van Unfold"
+              width={64}
+              height={64}
+              className="rounded-full"
+            />
+            <div className="text-center">
+              <p className="font-[family-name:var(--font-inter)] text-lg font-semibold text-black">
+                Joppe
+              </p>
+              <p className="font-[family-name:var(--font-inter)] text-base text-black">
+                Founder
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* ─── CTA + Footer ─── */}
+      <section className="relative flex flex-col" id="download">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/cta-bg.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/99 to-black" />
+        </div>
+
+        {/* CTA content */}
+        <div
+          className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-center pt-16 lg:pt-28 px-4 lg:px-16 gap-12"
+          aria-label="Download CTA"
+        >
+          {/* Phone Mockup — only on desktop */}
+          <div className="hidden lg:block shrink-0 relative w-[314px] h-[640px]">
+            <Image
+              src="/images/app-screen4.png"
+              alt="Unfold app preview"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Text + CTA */}
+          <div className="flex flex-col gap-8 w-full lg:w-[560px] lg:shrink-0">
+            <h2 className="font-[family-name:var(--font-playfair)] text-[40px] lg:text-[55px] font-bold text-white leading-[48px] lg:leading-[68px]">
+              <span className="block" style={{ marginBottom: "13px" }}>Geen small talk.</span>
+              <span className="block">Gewoon echte vragen.</span>
+            </h2>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-[family-name:var(--font-inter)] text-base text-black w-fit hover:bg-white/90 transition-colors"
+            >
+              Start the convo
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
+
+/* ─── Phone Mockup Component ─── */
+function PhoneMockup({
+  src,
+  alt,
+  size = "lg",
+}: {
+  src: string;
+  alt: string;
+  size?: "sm" | "lg";
+}) {
+  if (size === "sm") {
+    return (
+      <div className="relative w-[280px] h-[570px] shrink-0">
+        <Image src={src} alt={alt} fill className="object-contain" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative mx-auto w-[280px] h-[570px] lg:w-[430px] lg:h-[875px] shrink-0">
+      <Image src={src} alt={alt} fill className="object-contain" />
     </div>
   );
 }
