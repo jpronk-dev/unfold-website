@@ -67,7 +67,9 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
+          <FadeIn className="self-center lg:self-auto">
+            <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — kaart met vraag" />
+          </FadeIn>
         </div>
       </section>
 
@@ -77,9 +79,9 @@ export default function Home() {
         aria-label="Feature 2"
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-20 w-full max-w-[1280px]">
-          <div className="order-last lg:order-first">
+          <FadeIn className="order-last lg:order-first self-center lg:self-auto">
             <PhoneMockup src="/images/app-screen2.png" alt="Unfold app — kies je vibe" />
-          </div>
+          </FadeIn>
 
           <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
             <h2 className="font-[family-name:var(--font-inter)] text-[36px] lg:text-[48px] font-medium text-[#40341e] leading-[1.2]">
@@ -113,7 +115,9 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+          <FadeIn className="self-center lg:self-auto">
+            <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+          </FadeIn>
         </div>
       </section>
 
