@@ -36,10 +36,10 @@ export default function Footer({ noBackground = false }: { noBackground?: boolea
                 Contact
               </p>
               <a
-                href="mailto:email@example.com"
+                href="mailto:support@unfoldapp.org"
                 className="font-[family-name:var(--font-inter)] text-base text-white hover:opacity-80 transition-opacity py-2"
               >
-                email@example.com
+                support@unfoldapp.org
               </a>
             </div>
 
@@ -50,42 +50,34 @@ export default function Footer({ noBackground = false }: { noBackground?: boolea
               </p>
               <div className="flex flex-col">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/the_unfold_app?igsh=c25nbm90cHd6bzdz&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 py-2 group"
+                  className="py-2 group"
                   aria-label="Volg Unfold op Instagram"
                 >
                   <Image
                     src="/images/instagram.svg"
-                    alt=""
+                    alt="Instagram"
                     width={24}
                     height={24}
                     className="group-hover:opacity-80 transition-opacity"
-                    aria-hidden="true"
                   />
-                  <span className="font-[family-name:var(--font-roboto)] text-sm text-white group-hover:opacity-80 transition-opacity">
-                    Instagram
-                  </span>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/joppe-pronk-3a8b88232/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 py-2 group"
+                  className="py-2 group"
                   aria-label="Volg Unfold op LinkedIn"
                 >
                   <Image
                     src="/images/linkedin.svg"
-                    alt=""
+                    alt="LinkedIn"
                     width={24}
                     height={24}
                     className="group-hover:opacity-80 transition-opacity"
-                    aria-hidden="true"
                   />
-                  <span className="font-[family-name:var(--font-roboto)] text-sm text-white group-hover:opacity-80 transition-opacity">
-                    LinkedIn
-                  </span>
                 </a>
               </div>
             </div>
