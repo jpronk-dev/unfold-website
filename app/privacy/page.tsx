@@ -146,8 +146,11 @@ export default function PrivacyPage() {
               Unfold maakt geen gebruik van trackingcookies binnen de app.
             </p>
             <p className="mt-4">
-              Indien er in de toekomst tracking of analytics wordt toegevoegd,
-              zullen wij dit duidelijk communiceren.
+              Op onze website (unfoldapp.org) maken wij gebruik van{" "}
+              <strong>Vercel Analytics</strong>. Dit is een privacyvriendelijke
+              analysetool die anonieme bezoekersstatistieken bijhoudt, zoals het
+              aantal paginaweergaven. Er worden geen persoonlijke gegevens
+              verzameld en er worden geen cookies geplaatst.
             </p>
           </PrivacySection>
 
@@ -170,10 +173,10 @@ export default function PrivacyPage() {
               <br />
               Stuur dan een e-mail naar:{" "}
               <a
-                href="mailto:email@example.com"
+                href="mailto:support@unfoldapp.org"
                 className="underline hover:opacity-80 transition-opacity"
               >
-                email@example.com
+                support@unfoldapp.org
               </a>
             </p>
             <p className="mt-4">We reageren binnen vier weken.</p>
