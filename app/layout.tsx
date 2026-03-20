@@ -24,10 +24,10 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://unfold.nl"),
-  title: "Unfold — Geen small talk. Gewoon echte vragen.",
+  title: "Unfold — No small talk. Just real questions.",
   description:
-    "Voor first dates, vrienden, situatieships en 3AM talks. Kies een vibe. Trek een kaart. See what unfolds.",
-  keywords: ["unfold", "app", "conversatie", "vragen", "date", "vrienden"],
+    "For first dates, friends, situationships and 3AM talks. Choose a vibe. Draw a card. See what unfolds.",
+  keywords: ["unfold", "app", "conversations", "questions", "date", "friends"],
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -60,18 +60,18 @@ export const metadata: Metadata = {
     "msapplication-square310x310logo": "/mstile-310x310.png",
   },
   openGraph: {
-    title: "Unfold — Geen small talk. Gewoon echte vragen.",
+    title: "Unfold — No small talk. Just real questions.",
     description:
-      "Voor first dates, vrienden, situatieships en 3AM talks. Kies een vibe. Trek een kaart. See what unfolds.",
+      "For first dates, friends, situationships and 3AM talks. Choose a vibe. Draw a card. See what unfolds.",
     type: "website",
-    locale: "nl_NL",
+    locale: "en_US",
     images: [{ url: "/og-image.png", width: 1512, height: 945 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unfold — Geen small talk. Gewoon echte vragen.",
+    title: "Unfold — No small talk. Just real questions.",
     description:
-      "Voor first dates, vrienden, situatieships en 3AM talks. Kies een vibe. Trek een kaart. See what unfolds.",
+      "For first dates, friends, situationships and 3AM talks. Choose a vibe. Draw a card. See what unfolds.",
     images: ["/og-image.png"],
   },
 };
@@ -82,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl">
+    <html lang="en">
       <body
         className={`${inter.variable} ${playfair.variable} ${roboto.variable} antialiased`}
       >

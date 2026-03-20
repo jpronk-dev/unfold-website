@@ -1,6 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Footer({ noBackground = false }: { noBackground?: boolean }) {
+export default function Footer({
+  lang,
+  noBackground = false,
+}: {
+  lang: string
+  noBackground?: boolean
+}) {
   return (
     <footer
       className="relative flex justify-center px-4 py-16 lg:px-16 lg:py-20"
@@ -92,7 +98,7 @@ export default function Footer({ noBackground = false }: { noBackground?: boolea
               © 2026 Unfold. All rights reserved.
             </p>
             <a
-              href="/privacy"
+              href={`/${lang}/privacy`}
               className="font-[family-name:var(--font-roboto)] text-sm text-white underline hover:opacity-80 transition-opacity"
             >
               Privacy Policy
@@ -101,5 +107,5 @@ export default function Footer({ noBackground = false }: { noBackground?: boolea
         </div>
       </div>
     </footer>
-  );
+  )
 }
