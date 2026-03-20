@@ -82,7 +82,7 @@ export default async function Home({
           </FadeIn>
 
           <FadeIn className="self-center lg:self-auto">
-            <PhoneMockup src="/images/app-screen1.png" alt="Unfold app — question card" />
+            <PhoneMockup src={`/images/app-screen1-${lang}.png`} alt="Unfold app — question card" />
           </FadeIn>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default async function Home({
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-20 lg:gap-20 w-full max-w-[1280px]">
           <FadeIn className="order-last lg:order-first self-center lg:self-auto">
-            <PhoneMockup src="/images/app-screen2.png" alt="Unfold app — choose your vibe" />
+            <PhoneMockup src={`/images/app-screen2-${lang}.png`} alt="Unfold app — choose your vibe" />
           </FadeIn>
 
           <FadeIn className="flex flex-col gap-6 w-full lg:flex-1">
@@ -140,7 +140,7 @@ export default async function Home({
           </FadeIn>
 
           <FadeIn className="self-center lg:self-auto">
-            <PhoneMockup src="/images/app-screen3.png" alt="Unfold app — hot takes" />
+            <PhoneMockup src={`/images/app-screen3-${lang}.png`} alt="Unfold app — hot takes" />
           </FadeIn>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default async function Home({
             {/* Phone Mockup — only on desktop */}
             <div className="hidden lg:block shrink-0 relative w-[680px] h-[1385px]">
               <Image
-                src="/images/app-screen4.png"
+                src={`/images/app-screen4-${lang}.png`}
                 alt="Unfold app preview"
                 fill
                 className="object-contain"
